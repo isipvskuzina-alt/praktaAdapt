@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация - Ниндзяго</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Регистрация в мире Ниндзяго</h1>
+    </header>
+
+    <nav style="text-align: center; margin: 20px 0;">
+        <a href="index.html"> Главная</a>
+        <a href="login.html"> Вход</a>
+        <a href="lessons.html"> Мастера</a>
+        <a href="schedule.html"> Расписание</a>
+    </nav>
+
+    <div class="auth-container" style="max-width: 500px; margin: 50px auto; background: #1e293b; padding: 30px; border-radius: 20px;">
+        <h2 style="color: #facc15; text-align: center;">Стань частью легенды!</h2>
+        
+        <form onsubmit="registerUser(event)">
+            <input type="text" id="full_name" placeholder="ФИО" required style="width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white;">
+            
+            <input type="email" id="email" placeholder="Email" required style="width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white;">
+            
+            <input type="text" id="login" placeholder="Логин" required style="width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white;">
+            
+            <input type="password" id="password" placeholder="Пароль" required style="width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white;">
+            
+            <select id="role" required style="width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white;">
+                <option value="student"> Ученик</option>
+                <option value="teacher"> Учитель</option>
+            </select>
+            
+            <button type="submit" style="width: 100%; padding: 12px; background: #000000; color: #0f172a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Зарегистрироваться</button>
+        </form>
+        
+        <div id="message" class="message" style="margin-top: 20px; text-align: center;"></div>
+        
+        <p style="text-align: center; margin-top: 20px;">
+            Уже есть аккаунт? <a href="login.html" style="color: #facc15;">Войдите</a>
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
